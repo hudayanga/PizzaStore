@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaStore.Factory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace PizzaStore
     {
         static void Main(string[] args)
         {
+            var store = new PizzaStore(new SimplePizzaFactory());
+            var input = Console.ReadLine();
+            store.OrderPizza(input);
         }
     }
 }
